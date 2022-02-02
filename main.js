@@ -7,7 +7,11 @@ ctx.lineWidth = 2;
 ctx.arc(200, 200, 40, 0, 2 * Math.PI);
 ctx.stroke();
 canvas.addEventListener("mousedown", my_mousedown);
-
+ctx.beginPath();
+ctx.strokeStyle = "red";
+ctx.lineWidth = 1;
+ctx.rect(150, 143, 430, 200);
+ctx.stroke();
 function my_mousedown(e)
 {
     color = document.getElementById("color").value;
@@ -25,4 +29,6 @@ function circle(mouse_x , mouse_y)
     ctx.arc(mouse_x, mouse_y, 40, 0, 2*Math.PI);
     ctx.stroke();
 }
-function clearArea() { ctx.clearRect(0, 0, canvas.width, canvas.height); }
+function clearArea() { ctx.clearRect(0, 0, canvas.width, canvas.height);
+ }
+ 
