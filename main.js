@@ -24,11 +24,22 @@ function my_mousedown(e)
 function circle(mouse_x , mouse_y)
 {
     ctx.beginPath();
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
-    ctx.arc(mouse_x, mouse_y, 40, 0, 2*Math.PI);
+    ctx.strokeStyle = blue;
+    ctx.lineWidth = 5;
+    ctx.arc(250, 210, 40, 0, 2*Math.PI);
     ctx.stroke();
 }
-function clearArea() { ctx.clearRect(0, 0, canvas.width, canvas.height);
- }
+function rect()
+{
+    ctx.beginPath();
+    ctx.strokeStyle = "red";
+    cx.lineWidth = 1;
+    ctx.rect(150, 143, 430, 200);
+    ctx.stroke();
+}
+function clearArea() 
+{ 
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
  
