@@ -1,17 +1,8 @@
 canvas = document.getElementById("myCanvas");
 color = "red";
 ctx= canvas.getContext("2d");
-ctx.beginPath();
-ctx.strokeStyle = color;
-ctx.lineWidth = 2;
-ctx.arc(200, 200, 40, 0, 2 * Math.PI);
-ctx.stroke();
+rect();
 canvas.addEventListener("mousedown", my_mousedown);
-ctx.beginPath();
-ctx.strokeStyle = "red";
-ctx.lineWidth = 1;
-ctx.rect(150, 143, 430, 200);
-ctx.stroke();
 function my_mousedown(e)
 {
     color = document.getElementById("color").value;
@@ -24,7 +15,7 @@ function my_mousedown(e)
 function circle(mouse_x , mouse_y)
 {
     ctx.beginPath();
-    ctx.strokeStyle = blue;
+    ctx.strokeStyle = color;
     ctx.lineWidth = 5;
     ctx.arc(250, 210, 40, 0, 2*Math.PI);
     ctx.stroke();
@@ -33,7 +24,7 @@ function rect()
 {
     ctx.beginPath();
     ctx.strokeStyle = "red";
-    cx.lineWidth = 1;
+    ctx.lineWidth = 1;
     ctx.rect(150, 143, 430, 200);
     ctx.stroke();
 }
